@@ -1,0 +1,61 @@
+{
+ "duration": 47.204,
+ "voice": "am_michael",
+ "speed": 1.07,
+ "lines": [
+  {
+   "i": 0,
+   "text": "Anthropic, the AI company, just turned thousands of its workers into millionaires.",
+   "start": 0.35,
+   "end": 5.64
+  },
+  {
+   "i": 1,
+   "text": "Here's how. As part of their pay, many workers got the right to buy company shares for about three dollars each.",
+   "start": 5.9,
+   "end": 12.569
+  },
+  {
+   "i": 2,
+   "text": "This week, the company started selling shares to the public, for eighty-three dollars each.",
+   "start": 12.829,
+   "end": 17.767
+  },
+  {
+   "i": 3,
+   "text": "That's about twenty-eight times more.",
+   "start": 18.027,
+   "end": 19.798
+  },
+  {
+   "i": 4,
+   "text": "On average, each worker now owns about forty-four million dollars in stock.",
+   "start": 20.058,
+   "end": 24.839
+  },
+  {
+   "i": 5,
+   "text": "And the seven people who started the company? About twenty billion dollars each.",
+   "start": 25.099,
+   "end": 29.572
+  },
+  {
+   "i": 6,
+   "text": "But there's a catch. For now, workers can sell only ten percent of their shares.",
+   "start": 29.832,
+   "end": 34.362
+  },
+  {
+   "i": 7,
+   "text": "So if a job ever offers you stock instead of cash, ask two things. How much do I pay? And when can I sell?",
+   "start": 34.622,
+   "end": 41.61
+  },
+  {
+   "i": 8,
+   "text": "Cash or stock? Which would you pick?",
+   "start": 41.87,
+   "end": 43.784
+  }
+ ]
+}

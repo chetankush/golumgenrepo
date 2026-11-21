@@ -1,0 +1,55 @@
+{
+  "title": "Anthropic Just Made Thousands of Workers Millionaires. Here's How",
+  "voice": "am_michael",
+  "speed": 1.07,
+  "lead": 0.35,
+  "outro": 3.2,
+  "gap": 0.22,
+  "music": "audio/music.wav",
+  "sources": [
+    "Thousands of millionaires: CNBC headline 'Anthropic IPO will create thousands of multimillionaire employees' (Nov 19 2026); NY Post via Yahoo: about 2,800 staff worth at least $10M.",
+    "IPO: priced at $83 a share, Nasdaq debut Nov 19 2026, closed $97.17 (Forbes, Yahoo Finance, CNN).",
+    "Employees: about 5,300 (SEC filings via CNBC); stakes about $232 billion at $83, about $44 million each on average (CNBC calculation from filing share counts; also Fortune).",
+    "Options: about 1.77 billion stock options with a strike price of $2.91 (SEC filings via CNBC).",
+    "Co-founders: seven, each about $20 billion at $83 (CNBC from SEC filings; CBS News).",
+    "Selling: employees may sell up to 10% once trading begins (Yahoo Finance / NY Post; Fortune), another 35% after earnings (Fortune).",
+    "Not financial advice."
+  ],
+  "lines": [
+    {
+      "text": "Anthropic, the AI company, just turned thousands of its workers into millionaires.",
+      "gap": 0.26
+    },
+    {
+      "text": "Here's how. As part of their pay, many workers got the right to buy company shares for about three dollars each.",
+      "gap": 0.26
+    },
+    {
+      "text": "This week, the company started selling shares to the public, for eighty-three dollars each.",
+      "gap": 0.26
+    },
+    {
+      "text": "That's about twenty-eight times more.",
+      "gap": 0.26
+    },
+    {
+      "text": "On average, each worker now owns about forty-four million dollars in stock.",
+      "gap": 0.26
+    },
+    {
+      "text": "And the seven people who started the company? About twenty billion dollars each.",
+      "gap": 0.26
+    },
+    {
+      "text": "But there's a catch. For now, workers can sell only ten percent of their shares.",
+      "gap": 0.26
+    },
+    {
+      "text": "So if a job ever offers you stock instead of cash, ask two things. How much do I pay? And when can I sell?",
+      "gap": 0.26
+    },
+    {
+      "text": "Cash or stock? Which would you pick?"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# renders and generated media
+renders/
+review/
+*.mp4
+*.wav
+*.mp3
+.DS_Store
+__pycache__/
