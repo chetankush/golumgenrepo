@@ -29,18 +29,28 @@ def make_refs():
 
 def ref(t): return Image.open(os.path.join(REF, f't{t:.2f}.jpg')).convert('L').resize((54, 96))
 
+_CUTS = None
+def cut_times():
+    """shot start times; the first 0.3 s after a cut are skipped (whip / flash transitions blend in the previous frame,
+    so a stand-alone reference frame can't match them)"""
+    global _CUTS
+    if _CUTS is None:
+        import re
+        r = subprocess.run(['node', 'tools/capture.mjs', 'check'], capture_output=True, text=True)
+        _CUTS = [float(m.group(1)) for m in re.finditer(r'^\S+\s+([0-9.]+) \u2192', r.stdout, re.M)]
+    return _CUTS
+
 def broken_times(path, a=0.0, b=None):
     """compare the video's frames (which start at film time a) with the reference frames; return film times that differ"""
     b = dur if b is None else b
+    bad = []
     with tempfile.TemporaryDirectory() as d:
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', path, '-vf', f'fps={1 / STEP}:round=near,scale=54:96', os.path.join(d, 'f%05d.png')], check=True)
-        bad = []
-        for i, f in enumerate(sorted(os.listdir(d))):
-            t = round(a + i * STEP, 3)
-            if t not in grid or t >= b: continue
-            diff = ImageStat.Stat(ImageChops.difference(Image.open(os.path.join(d, f)).convert('L'), ref(t))).mean[0]
+        for t in [g for g in grid if a <= g < b and not any(0 <= g - c < 0.3 for c in cut_times())]:
+            f = os.path.join(d, 'f.png')   # exact-time grab (a fast fps filter lands a frame or two off and flags moving shots)
+            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{t - a:.3f}', '-i', path, '-frames:v', '1', '-vf', 'scale=54:96', f], check=True)
+            diff = ImageStat.Stat(ImageChops.difference(Image.open(f).convert('L'), ref(t))).mean[0]
             if diff > LIMIT: bad.append(t)
-        return bad
+    return bad
 
 def decode_errors(path):
     r = subprocess.run(['ffmpeg', '-v', 'error', '-i', path, '-f', 'null', '-'], capture_output=True, text=True)
@@ -57,6 +67,8 @@ os.makedirs('renders/pieces', exist_ok=True)
 pieces = []
 for i, (a, b) in enumerate(zip(cuts, cuts[1:])):
     p = f'renders/pieces/p{i:02d}.mp4'
+    if os.path.exists(p) and not broken_times(p, a, b) and not decode_errors(p):
+        print(f'piece {i} ({a:.1f}-{b:.1f} s): already rendered and checked, reused', flush=True); pieces.append(p); continue
     for attempt in range(1, 6):
         wait_gpu()
         subprocess.run(['node', 'tools/capture.mjs', 'video', p, str(a), str(b)], env=dict(os.environ, QS='&res=2'), stdout=subprocess.DEVNULL, check=True)
