@@ -1,0 +1,30 @@
+{
+  "title": "The Dark Truth Behind Black Friday",
+  "channel": "@OnlyFreeFacts",
+  "voices": { "MILO": "ElevenLabs - Liam (energetic)", "DAISY": "ElevenLabs - Sarah (confident, mysterious)" },
+  "music": "audio/music.wav",
+  "sources": [
+    "The term 'Black Friday' originated with Philadelphia police in the 1950s-60s describing the chaotic traffic and crowds the day after Thanksgiving (Philadelphia Inquirer archives; History.com).",
+    "Retailers in the 1980s popularized the 'red ink to black ink' (profitable) explanation and briefly tried 'Big Friday' as a replacement name, which did not catch on (Snopes; History.com)."
+  ],
+  "lines": [
+    { "i": 0, "speaker": "DAISY", "text": "Did you know about the dark truth behind Black Friday?" },
+    { "i": 1, "speaker": "MILO", "text": "Dark truth? It's just a shopping day... right?" },
+    { "i": 2, "speaker": "DAISY", "text": "That's what they... want you to think." },
+    { "i": 3, "speaker": "DAISY", "text": "Stores say it's the day they finally make money. They go from in the red, to in the black." },
+    { "i": 4, "speaker": "MILO", "text": "That sounds nice." },
+    { "i": 5, "speaker": "DAISY", "text": "Yeah... too nice. That's not where the name came from." },
+    { "i": 6, "speaker": "DAISY", "text": "The name actually came from cops in Philadelphia, back in the 1950s and 60s." },
+    { "i": 7, "speaker": "MILO", "text": "Cops?!" },
+    { "i": 8, "speaker": "DAISY", "text": "The day after Thanksgiving, the city turned into chaos. Huge crowds, traffic jams everywhere." },
+    { "i": 9, "speaker": "MILO", "text": "Sounds terrible." },
+    { "i": 10, "speaker": "DAISY", "text": "It was! Police couldn't take the day off. They worked crazy long shifts. So they called it... Black Friday, because it was their worst day of the year." },
+    { "i": 11, "speaker": "MILO", "text": "So how did it become a shopping holiday?" },
+    { "i": 12, "speaker": "DAISY", "text": "Stores hated the name, so they tried to rename it Big Friday." },
+    { "i": 13, "speaker": "MILO", "text": "Big Friday? Really?" },
+    { "i": 14, "speaker": "DAISY", "text": "Nobody used it. So they just gave the old name a happy new story." },
+    { "i": 15, "speaker": "MILO", "text": "So the profit story is..." },
+    { "i": 16, "speaker": "DAISY", "text": "Marketing! The real Black Friday started as a nightmare for the police." },
+    { "i": 17, "speaker": "MILO", "text": "Subscribe to OnlyFreeFacts for more facts about everyday things!" }
+  ]
+}
